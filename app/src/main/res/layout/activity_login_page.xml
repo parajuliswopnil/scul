@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".login_page">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/schoollogo"></ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:alpha="0.8"
+            android:background="@drawable/login_page_linearlayout_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/laila_semibold"
+                android:text="Welcome"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+
+                />
+
+            <EditText
+                android:id="@+id/loginEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textColorHint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColorHint="@android:color/white" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/login_button_background"
+                android:text="login"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/signUp_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="45dp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:stateListAnimator="@null"
+                android:text="register" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:outlineSpotShadowColor="@android:color/white"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

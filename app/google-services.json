@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "595109249613",
+    "firebase_url": "https://scul-ca100.firebaseio.com",
+    "project_id": "scul-ca100",
+    "storage_bucket": "scul-ca100.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595109249613:android:a4934770db8d819cbf5204",
+        "android_client_info": {
+          "package_name": "com.example.scul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595109249613-87tpfpuv6k3nai6da3b58b1njfnc1t5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.scul",
+            "certificate_hash": "bc7f84b9f1846fd954603be6650cf1beed1c5816"
+          }
+        },
+        {
+          "client_id": "595109249613-976cpd1m0qo66k22irvtmkgb6u5c9ur6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAULMmduRoUiZth4PuU4fdgn4X6bAwcfG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595109249613-976cpd1m0qo66k22irvtmkgb6u5c9ur6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
