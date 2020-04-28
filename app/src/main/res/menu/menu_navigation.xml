@@ -6,15 +6,15 @@
         android:icon="@drawable/home"/>
     <item
         android:id="@+id/notification"
-        android:title="notification"
+        android:title="notice"
         android:icon="@drawable/notification"/>
     <item
         android:id="@+id/classes"
-        android:title="classes"
+        android:title="Classes"
         android:icon="@drawable/classes"/>
     <item
         android:id="@+id/account"
-        android:title="account"
+        android:title="You"
         android:icon="@drawable/account"/>
 
 

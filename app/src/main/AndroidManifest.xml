@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mainpage"></activity>
+        <activity android:name=".Account"></activity>
+        <activity android:name=".Classes" />
+        <activity android:name=".Notification" />
+        <activity android:name=".mainpage" />
         <activity android:name=".signup_page" />
         <activity
             android:name=".MainActivity"
