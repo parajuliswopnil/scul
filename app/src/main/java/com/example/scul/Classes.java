@@ -16,29 +16,33 @@ public class Classes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classes);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.classes);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.notification);
+        bottomNavigationView.setSelectedItemId(R.id.classes);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
                     case R.id.notification:
                         startActivity(new Intent(getApplicationContext(), Notification.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+                        return true;
+
 
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), mainpage.class));
-                        overridePendingTransition(0,0);
-
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.classes:
 
+                        return true;
                     case R.id.account:
                         startActivity(new Intent(getApplicationContext(), Account.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
-
+                return false;
             }
         });
     }

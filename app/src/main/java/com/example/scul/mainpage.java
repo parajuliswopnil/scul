@@ -20,23 +20,30 @@ public class mainpage extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
                     case R.id.notification:
                         startActivity(new Intent(getApplicationContext(), Notification.class));
-                        overridePendingTransition(0,0);
-                    case R.id.home:
+                        overridePendingTransition(0, 0);
+                        return true;
 
+
+                    case R.id.home:
+                        return true;
                     case R.id.classes:
                         startActivity(new Intent(getApplicationContext(), Classes.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+
+                        return true;
                     case R.id.account:
                         startActivity(new Intent(getApplicationContext(), Account.class));
-                        overridePendingTransition(0,0);
-                }
+                        overridePendingTransition(0, 0);
 
+                        return true;
+                }
+                return false;
             }
         });
     }

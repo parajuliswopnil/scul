@@ -19,25 +19,29 @@ public class Notification extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.notification);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
-            @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.notification:
+       bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+           @Override
+           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+               switch (item.getItemId()) {
+                   case R.id.notification:
+                       return true;
 
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), mainpage.class));
-                        overridePendingTransition(0,0);
 
-                    case R.id.classes:
-                        startActivity(new Intent(getApplicationContext(), Classes.class));
-                        overridePendingTransition(0,0);
-                    case R.id.account:
-                        startActivity(new Intent(getApplicationContext(), Account.class));
-                        overridePendingTransition(0,0);
-                }
-
-            }
-        });
+                   case R.id.home:
+                       startActivity(new Intent(getApplicationContext(), mainpage.class));
+                       overridePendingTransition(0, 0);
+                       return true;
+                   case R.id.classes:
+                       startActivity(new Intent(getApplicationContext(), Classes.class));
+                       overridePendingTransition(0, 0);
+                       return true;
+                   case R.id.account:
+                       startActivity(new Intent(getApplicationContext(), Account.class));
+                       overridePendingTransition(0, 0);
+                       return true;
+               }
+               return false;
+           }
+       });
     }
 }

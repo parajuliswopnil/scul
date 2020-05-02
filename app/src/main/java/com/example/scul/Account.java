@@ -15,30 +15,34 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.account);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.notification);
+        bottomNavigationView.setSelectedItemId(R.id.account);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
                     case R.id.notification:
                         startActivity(new Intent(getApplicationContext(), Notification.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+                        return true;
+
 
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), mainpage.class));
-                        overridePendingTransition(0,0);
-
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.classes:
                         startActivity(new Intent(getApplicationContext(), Classes.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
 
+                        return true;
                     case R.id.account:
 
+                        return true;
                 }
-
+                return false;
             }
         });
     }
