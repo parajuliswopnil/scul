@@ -43,6 +43,12 @@ public class login_page extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         signUpButton = findViewById(R.id.signUp_button);
 
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), mainpage.class));
+            finish();
+        }
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
